@@ -78,6 +78,7 @@
       window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
     }
   }
+  
   scrollTop.addEventListener('click', (e) => {
     e.preventDefault();
     window.scrollTo({

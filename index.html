@@ -30,7 +30,105 @@
   <link href="assets/css/main.css" rel="stylesheet">
 
   <style>
-    /* Контейнер для всех icon-box в одной строке */
+
+.hero {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
+    padding: 0; 
+    text-align: center;
+    background: url(./assets/img/hero-bg.jpg) no-repeat center center;
+    background-size: cover; 
+    position: relative; 
+}
+
+.hero:before {
+    content: "";
+    background: rgba(0, 0, 0, 0.5); 
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h2 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    margin: 0; 
+    color: #fff;
+    z-index: 3;
+}
+
+.hero .download-btn {
+    color: #fff;
+    background-color: #007bff; 
+    font-family: var(--heading-font);
+    font-weight: 500;
+    font-size: 15px;
+    padding: 10px 30px;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    margin-top: 20px;
+    z-index: 3; 
+}
+
+
+.hero .download-btn:hover {
+    background-color: #0056b3;
+}
+
+
+.hero .download-btn i {
+    font-size: 16px;
+    margin-right: 8px; 
+}
+
+
+@media (max-width: 768px) {
+  .hero {
+    margin-top: -5cm; 
+
+  }
+    .hero h2 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .hero .download-btn {
+        font-size: 14px;
+        padding: 8px 20px;
+    }
+    .hero p {
+        margin-bottom: 0!important;
+    }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    margin-top: -7cm; 
+
+  }
+  .hero .download-btn {
+        font-size: 14px;
+        padding: 8px 20px;
+    }
+    .hero p {
+        margin-bottom: 0!important;
+    }
+}
+
+
     .icon-boxes {
       display: flex;
       /* Используем flexbox для выравнивания блоков по горизонтали */
