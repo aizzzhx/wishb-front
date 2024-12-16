@@ -30,103 +30,106 @@
   <link href="assets/css/main.css" rel="stylesheet">
 
   <style>
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 0;
+      text-align: center;
+      background: url(./assets/img/hero-bg.jpg) no-repeat center center;
+      background-size: cover;
+      position: relative;
+    }
 
-.hero {
-    display: flex;
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center; 
-    min-height: 100vh; 
-    padding: 0; 
-    text-align: center;
-    background: url(./assets/img/hero-bg.jpg) no-repeat center center;
-    background-size: cover; 
-    position: relative; 
-}
+    .hero:before {
+      content: "";
+      background: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
 
-.hero:before {
-    content: "";
-    background: rgba(0, 0, 0, 0.5); 
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-}
+    .hero .container {
+      position: relative;
+      z-index: 2;
+    }
 
-.hero .container {
-    position: relative;
-    z-index: 2;
-}
-
-.hero h2 {
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 56px;
-    margin: 0; 
-    color: #fff;
-    z-index: 3;
-}
-
-.hero .download-btn {
-    color: #fff;
-    background-color: #007bff; 
-    font-family: var(--heading-font);
-    font-weight: 500;
-    font-size: 15px;
-    padding: 10px 30px;
-    border-radius: 3px;
-    transition: background-color 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    margin-top: 20px;
-    z-index: 3; 
-}
-
-
-.hero .download-btn:hover {
-    background-color: #0056b3;
-}
-
-
-.hero .download-btn i {
-    font-size: 16px;
-    margin-right: 8px; 
-}
-
-
-@media (max-width: 768px) {
-  .hero {
-    margin-top: -5cm; 
-
-  }
     .hero h2 {
-        font-size: 28px;
-        line-height: 36px;
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 56px;
+      margin: 0;
+      color: #fff;
+      z-index: 3;
     }
 
     .hero .download-btn {
+      color: #fff;
+      background-color: #007bff;
+      font-family: var(--heading-font);
+      font-weight: 500;
+      font-size: 15px;
+      padding: 10px 30px;
+      border-radius: 3px;
+      transition: background-color 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      margin-top: 20px;
+      z-index: 3;
+    }
+
+
+    .hero .download-btn:hover {
+      background-color: #0056b3;
+    }
+
+
+    .hero .download-btn i {
+      font-size: 16px;
+      margin-right: 8px;
+    }
+
+
+    @media (max-width: 768px) {
+      .hero {
+        margin-top: -5cm;
+
+      }
+
+      .hero h2 {
+        font-size: 28px;
+        line-height: 36px;
+      }
+
+      .hero .download-btn {
         font-size: 14px;
         padding: 8px 20px;
-    }
-    .hero p {
-        margin-bottom: 0!important;
-    }
-}
+      }
 
-@media (max-width: 576px) {
-  .hero {
-    margin-top: -7cm; 
+      .hero p {
+        margin-bottom: 0 !important;
+      }
+    }
 
-  }
-  .hero .download-btn {
+    @media (max-width: 576px) {
+      .hero {
+        margin-top: -7cm;
+
+      }
+
+      .hero .download-btn {
         font-size: 14px;
         padding: 8px 20px;
+      }
+
+      .hero p {
+        margin-bottom: 0 !important;
+      }
     }
-    .hero p {
-        margin-bottom: 0!important;
-    }
-}
 
 
     .icon-boxes {
@@ -219,8 +222,9 @@
           <div class="col-lg-8 d-flex flex-column justify-content-center align-items text-center text-md-start"
             data-aos="fade-up">
             <h2>Откройте новые книги с помощью WishB</h2>
-            <p>WishB - это мобильное приложение для простого обмена книгами. Находите и делитесь книгами с другими
-              пользователями в обмен на желаемые книги</p>
+            <p>WishB - это мобильное приложение для обмена бумажными книгами между пользователями,
+              что способствует развитию культуры чтения и поддержке важности физических книг в современном цифровом
+              мире</p>
             <div class="d-flex mt-4 justify-content-center justify-content-md-start">
               <a href="#" class="download-btn"><i class="bi bi-google-play"></i> <span>Google Play</span></a>
               <a href="#" class="download-btn"><i class="bi bi-apple"></i> <span>App Store</span></a>
@@ -367,19 +371,115 @@
               поддерживая устойчивость и экологичность.
             </p>
           </div>
-
-
-
         </div><!-- Features Item -->
-
-        </div>
-        </section>
+      </div>
+    </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Автор проекта</h2>
-        <i>Aizere Zhaxymuratova</i>
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <p>
+          <h3>Автор проекта</h3>
+          <br /><strong>Aizere Zhaxymuratova</strong>
+          <br />My projects: <a href="https://github.com/aizzzhx" target="_blank">https://github.com/aizzzhx</a>
+          </p>
+        </div>
+        <h5>Experience</h5>
+        <p>
+          <strong>“Women in Software Development” UN SDG Incubator by UNICEF</strong>
+          <br /><i>Co-founder and UX/UI designer</i>
+          <br />Almaty, Kazakhstan. June – Aug 2024
+        <ul>
+          <li>Attended lectures by professors from Nazarbayev University and Kazakh-British Technical University</li>
+          <li>Learned how to effectively develop CS projects, how to use GitHub repository, and how to make technical
+            documentaion</li>
+          <li>Made my own project ”FarmX” using ML model on yoloV8 and AI</li>
+        </ul>
+        <strong>Almaty Junior Olympiad in Informatics (AJOI)</strong>
+        <br /><i>Event Organizer, WebDev Programmer, Designer</i>
+        <br />Almaty, Kazakhstan. Sept – Oct 2024
+        <ul>
+          <li>Made BrandBook of the Olympiad: Logo, IG posts templates, UX/UI of the website- ajoi.kz</li>
+          <li>Built Frontend of the website, using JavaScript</li>
+          <li>Organized selection tour and proctored 200+ participants from 30+ cities of Kazakhstan</li>
+          <li>Winners of the AJOI received $20,000+ Full-tuition scholarships at Satbayev University (#51-70 QS WUR
+            by DS & AI, #405 QS WU 2024), and International University of Information Technology (#49 QS CA);
+            Merchandise of NSPM; Money prizes of $200+; CompSci ”Math & Code” Courses Certificates</li>
+        </ul>
+        <strong>National School of Physics and Mathematics (NSPM)</strong>
+        <br><i>Event Organizer, Artist</i>
+        <br>Almaty, Kazakhstan. Sept 2023 – Oct 2024
+        <ul>
+          <li>Performed ”Romeo and Juliet”, ”Harry Potter”, and Traditional Kazakh Poems plays as a leader actor in
+            front of 500+ viewers</li>
+          <li>Organized and Volunteered at Several large School events like International Zhautykov Olympiad 2024
+            (IZhO, 14 countries, TOP Olympiad-winners on Math, Physics, CS), Fizmat Education Fair (w/ represen
+            tatives from NYU, Purdue, Education USA, CityU, Xiamen, etc), International Women’s Day (Big concert
+            for school students and parents, performed as a dancer), Fizmat VOICE (school talent show, perfomed as
+            a dancer). In total, 2,500+ participants</li>
+        </ul>
+
+        <strong>IDP IELTS Kazakhstan- ielts.idp.com </strong>
+        <br><i>Intern, Media Manager</i>
+        <br>Almaty, Kazakhstan. June - Aug 2024
+        <ul>
+          <li>Organized multiple events featuring international speakers to strengthen the English-speaking community
+            in Kazakhstan, engaging over 100 participants</li>
+          <li>Developed media content for Instagram and TikTok to promote IELTS as a pathway to top universities
+            worldwide, reaching an audience of over 52,000 subscribers</li>
+        </ul>
+
+        <strong>Qyzbolsyn- promote feminism in Kazakhstan</strong>
+        <br /><i>Writer</i>
+        <br>Almaty, Kazakhstan. June – Aug 2024
+        <ul>
+          <li>Wrote weekly articles on Women’s Social Justice for 900+ Instagram and Telegram readers. Among topics
+            are ”Women in art and culture”, ”Emotional Maturity”, etc</li>
+          <li>Developed my analytical and writing skills in English, Kazakh, and Russian languages</li>
+        </ul>
+        </p>
+
+        <h5>IT Projects</h5>
+        <p>
+          <strong>WishB- mobile app for sharing books between users</strong>
+        <ul>
+          <li>WishB– A social mobile application for book sharing between users, enabling people to exchange books
+            they’ve read for ones they wish to read</li>
+          <li>Programmed Backend using Python and Fast API, and Frontend using Flutter and Dart</li>
+        </ul>
+
+        <strong>UpAir- NASA Space App Challenge Project</strong>
+        <ul>
+          <li>Developed a website mapping air quality and eco posts in Almaty within 2 days given.
+            aizzzhx/UpAir</li>
+          <li>Programmed using HTML, CSS, JavaScript are used for developing the web and integrating data.</li>
+          <li>Created the interactive map by using software products and platforms such as Leaflet.js, a JavaScript
+            library
+            for maps, and geospatial data from OpenStreetMap. Air Quality Data is fetched from Public APIs</li>
+          <li>Presented project on final pitch in front of 50+ people</li>
+        </ul>
+
+        <strong>OhMyStyle!- mobile app for creating and matching outfits</strong>
+        <ul>
+          <li>The AI picks outfits for people according to their needs and criteria.</li>
+          <li>Making the app using Flutterflow and figma.</li>
+        </ul>
+        </p>
+
+
+        <h5>Certifications</h5>
+        <strong>Coursera. Developed foundational skills in to Dart- Credential ID KNIJHNBL1XA6</strong>
+        <ul>
+          <li>Developed foundational skills in Dart programming for high-performance applications.
+            Aug 2024</li>
+          <li>Gained knowledge of essential programming concepts: syntax, data types, control structures, and object
+            oriented programming</li>
+          <li>Prepared for advanced development tasks in mobile and web application projects.
+            Technologies</li>
+        </ul>
+        <strong>Technologies:</strong> <i>C++, Python, SQL, Dart, Flutter, HTML, CSS, LATEX, xCode, vsCode</i>
+        </p>
       </div><!-- End Section Title -->
 
 
