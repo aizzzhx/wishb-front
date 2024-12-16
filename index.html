@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>WishB - Сервис Обмен книгами</title>
+  <meta name="description" content="WishB - мобильное приложение для обмена книгами">
+  <meta name="keywords" content="обмен книгами, книги, социальное приложение">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts and Vendor CSS Files -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    /* Контейнер для всех icon-box в одной строке */
+    .icon-boxes {
+      display: flex;
+      /* Используем flexbox для выравнивания блоков по горизонтали */
+      flex-wrap: wrap;
+      /* Если блоки не помещаются, они переходят на новую строку */
+      gap: 20px;
+      /* Равномерные промежутки между блоками */
+      justify-content: flex-start;
+      /* Располагаем элементы слева */
+    }
+
+    /* Для каждого IconBox */
+    .icon-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      /* Все блоки будут одинаковой высоты */
+      padding: 20px;
+      box-sizing: border-box;
+      /* Учитываем padding в общей ширине */
+      flex: 1 1 calc(50% - 20px);
+      /* Каждому элементу даём 50% ширины с учетом gap */
+      min-height: 300px;
+      /* Минимальная высота для всех блоков */
+      background-color: #f8f9fa;
+      /* Пример фона, для лучшего восприятия */
+      border-radius: 8px;
+      /* Скругление углов */
+    }
+
+    /* Стили для иконок */
+    .icon-box i {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    .icon-box h3 {
+      margin-top: 10px;
+      /* Убираем лишний отступ сверху */
+    }
+
+    .icon-box p {
+      margin-bottom: 10px;
+      /* Убираем лишний отступ снизу */
+    }
+
+    /* Для корректного отображения между строками */
+    .row {
+      margin-bottom: 20px;
+      /* Устанавливаем одинаковый отступ между строками */
+    }
+  </style>
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1 class="sitename">WishB</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Главная</a></li>
+          <li><a href="#about">О приложении</a></li>
+          <li><a href="#features">Возможности</a></li>
+          <li><a href="#functions">Социальные Функции</a></li>
+          <li><a href="#contact">Об авторе</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-4 order-lg-last hero-img" data-aos="zoom-out">
+
+          </div>
+          <div class="col-lg-8 d-flex flex-column justify-content-center align-items text-center text-md-start"
+            data-aos="fade-up">
+            <h2>Откройте новые книги с помощью WishB</h2>
+            <p>WishB - это мобильное приложение для простого обмена книгами. Находите и делитесь книгами с другими
+              пользователями в обмен на желаемые книги</p>
+            <div class="d-flex mt-4 justify-content-center justify-content-md-start">
+              <a href="#" class="download-btn"><i class="bi bi-google-play"></i> <span>Google Play</span></a>
+              <a href="#" class="download-btn"><i class="bi bi-apple"></i> <span>App Store</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row align-items-xl-center gy-5">
+          <div class="col-xl-5 content">
+            <h3>О приложении</h3>
+            <h2>WishB — мобильное приложение для обмена бумажных книг</h2>
+            <p>Это мобильное приложение помогает пользователям находить и обмениваться книгами. Добавляйте книги в свой
+              список и ищите подходящие книги для обмена.</p>
+          </div>
+
+          <div class="col-xl-7">
+            <div class="row gy-4 icon-boxes">
+              <!-- Блок Регистрация -->
+              <div class="icon-box aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+                <i class="bi bi-command"></i>
+                <h3>Регистрация</h3>
+                <p>Мобильное приложение использует авторизация через google аккаунт<br />&nbsp;</p>
+              </div><!-- End Icon Box -->
+
+              <!-- Блок Добавление книг -->
+              <div class="icon-box aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
+                <i class="bi bi-command"></i>
+                <h3>Добавление книг</h3>
+                <p>Пользователи могут добавлять книги в свой список обмена, указывая название, автора и состояние книги
+                </p>
+              </div><!-- End Icon Box -->
+            </div><!-- End Row 1 -->
+
+            <div class="row gy-4 icon-boxes">
+              <!-- Блок Поиск книг -->
+              <div class="icon-box aos-init aos-animate" data-aos="fade-up" data-aos-delay="400">
+                <i class="bi bi-command"></i>
+                <h3>Поиск книг</h3>
+                <p>Через приложение найдите желаемую книгу и предложите её для обмена другому пользователю<br />&nbsp;
+                </p>
+              </div><!-- End Icon Box -->
+
+              <!-- Блок Бесплатная передача -->
+              <div class="icon-box aos-init aos-animate" data-aos="fade-up" data-aos-delay="500">
+                <i class="bi bi-command"></i>
+                <h3>Бесплатная передача</h3>
+                <p>Также пользователи могут предлагать книги для бесплатной передачи и находить те, которые отдают
+                  безвозмездно.</p>
+              </div><!-- End Icon Box -->
+            </div><!-- End Row 2 -->
+          </div>
+
+        </div>
+
+      </div>
+      </div>
+      </div>
+      </div>
+    </section><!-- /About Section -->
+
+    <!-- Features Section -->
+    <section id="features" class="features section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Функции</h2>
+        <p>Удобные возможности для обмена книгами</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+        <div class="row gy-4 align-items-center features-item">
+          <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
+            <img src="assets/img/features12.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7" data-aos="fade-up" data-aos-delay="100">
+            <h3>Управление списками книг</h3>
+            <p>Добавляйте свои книги для обмена и управляйте списком желаемых книг</p>
+          </div>
+        </div><!-- Features Item -->
+
+        <div class="row gy-4 align-items-center features-item">
+          <div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
+            <img src="assets/img/features122.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 order-2 order-md-1" data-aos="fade-up" data-aos-delay="200">
+            <h3>Обмен книг</h3>
+            <p>Вы можете предложить обмен прочитанной книги с другим пользователем в обмен на желаемую книгу</p>
+          </div>
+        </div><!-- Features Item -->
+
+
+
+      </div>
+    </section><!-- /Features Section -->
+    <section id="functions" class="features section">
+      <div class="container" data-aos="fade-up">
+        <div class="row gy-4 align-items-center features-item">
+          <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="300">
+            <img src="assets/img/features124.jpg" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-md-7" data-aos="fade-up" data-aos-delay="300">
+            <h3>Социальные функции</h3>
+            <p>
+              Цель приложения WishB — создание удобного приложение для обмена бумажными книгами между пользователями,
+              что способствует развитию культуры чтения и поддержке важности физических книг в современном цифровом
+              мире.
+            </p>
+
+            <p>
+              <strong>Важность чтения бумажных книг:</strong>
+            </p>
+            <p>
+              <strong>Углубление восприятия:</strong>
+            </p>
+            <p>Чтение бумажных книг помогает лучше сосредотачиваться на содержании, благодаря чему улучшается восприятие
+              и запоминание информации.
+            </p>
+            <p>
+              <strong>Снижение нагрузки на глаза:</strong><br />
+              В отличие от электронных устройств, бумажные книги не излучают синего света, что снижает усталость глаз
+              при долгом чтении.
+            </p>
+
+            <p> <strong>Физическое взаимодействие:</strong> </p>
+            <p> Ощущение бумаги, перелистывание страниц и возможность делать заметки прямо в книге создают более тесную
+              связь с текстом.
+            </p>
+            <p>
+              <strong>Поддержка традиций:</strong>
+            </p>
+            <p> Чтение бумажных книг сохраняет литературные традиции, передавая знания и истории в их первозданном виде.
+            </p>
+            <p>
+              <strong>Ограничение отвлекающих факторов:</strong>
+            </p>
+            <p> Бумажные книги не предлагают уведомлений и рекламы, что позволяет погружаться в чтение без отвлечений.
+            </p>
+            <p>
+              WishB помогает людям сохранять ценность бумажных книг, поощряя их обмен между читателями, тем самым
+              поддерживая устойчивость и экологичность.
+            </p>
+          </div>
+
+
+
+        </div><!-- Features Item -->
+
+        </div>
+        </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Автор проекта</h2>
+        <i>Aizere Zhaxymuratova</i>
+      </div><!-- End Section Title -->
+
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+    <div class="container">
+      <h3>WishB</h3>
+      <p>Обменивайтесь книгами и находите новые книги вместе с другими любителями чтения!</p>
+      <div class="social-links d-flex justify-content-center">
+        <a href="#"><i class="bi bi-twitter"></i></a>
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-instagram"></i></a>
+      </div>
+      <div class="container">
+        <div class="copyright">
+          &copy; 2024 <strong>WishB</strong>. Все права защищены.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
